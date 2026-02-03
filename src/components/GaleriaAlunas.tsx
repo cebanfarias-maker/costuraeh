@@ -8,95 +8,46 @@ import alunas4 from "@/assets/alunas-4.webp";
 import alunas5 from "@/assets/alunas-5.jpg";
 
 const fotos = [
-  {
-    src: alunas1,
-    alt: "Turma de alunas em momento de confraternização no ateliê",
-    caption: "Nosso espaço acolhedor e as amigas que você faz aqui",
-  },
-  {
-    src: alunas2,
-    alt: "Alunas exibindo almofadas que criaram no curso",
-    caption: "Primeiras peças prontas! Orgulho das nossas alunas",
-  },
-  {
-    src: alunas3,
-    alt: "Alunas concentradas nas máquinas de costura durante aula prática",
-    caption: "Aulas práticas com turmas pequenas e atenção individual",
-  },
-  {
-    src: alunas4,
-    alt: "Professora demonstrando técnicas de modelagem para turma",
-    caption: "Aprendendo modelagem do zero com método exclusivo",
-  },
-  {
-    src: alunas5,
-    alt: "Ateliê cheio de peças coloridas feitas pelas alunas",
-    caption: "O ateliê ganha vida com as criações das alunas",
-  },
+  { src: alunas1, alt: "Aula de costura criativa" },
+  { src: alunas2, alt: "Trabalhos das alunas" },
+  { src: alunas3, alt: "Momento de aprendizado" },
+  { src: alunas4, alt: "Criações do ateliê" },
+  { src: alunas5, alt: "Turma de costura" },
 ];
 
 const GaleriaAlunas = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   return (
-    <section id="alunas" className="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
-      {/* Decorative yarn elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 rounded-full bg-brand-secondary/10 animate-float-slow" />
-      <div className="absolute bottom-10 right-10 w-16 h-16 rounded-full bg-primary/10 animate-float" />
-      
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="galeria" className="py-20 md:py-28 bg-background">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            Nossa comunidade
-          </span>
           <h2 className="section-title text-foreground">
-            Conheça nossas{" "}
-            <span className="text-gradient">alunas</span>
+            Nosso <span className="text-gradient">Espaço</span>
           </h2>
           <p className="section-subtitle mt-4">
-            Veja momentos reais das nossas aulas e o que você vai encontrar por aqui
+            Momentos das nossas aulas e criações
           </p>
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {fotos.map((foto, index) => (
             <button
               key={index}
               onClick={() => setSelectedImage(index)}
-              className={`group relative overflow-hidden rounded-2xl aspect-square cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-large ${
-                index === 2 ? "md:col-span-1 lg:col-span-1 md:row-span-1" : ""
+              className={`relative overflow-hidden rounded-2xl aspect-square cursor-pointer transition-transform duration-300 hover:scale-[1.02] ${
+                index === 0 ? "md:col-span-2 md:row-span-2" : ""
               }`}
               aria-label={`Ver foto: ${foto.alt}`}
             >
               <img
                 src={foto.src}
                 alt={foto.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                {foto.caption}
-              </div>
             </button>
-          ))}
-        </div>
-
-        {/* Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { number: "500+", label: "Alunas formadas" },
-            { number: "4.9", label: "Avaliação média" },
-            { number: "97%", label: "Recomendam" },
-            { number: "7", label: "Anos de experiência" },
-          ].map((stat, index) => (
-            <div key={index} className="text-center p-6 bg-card rounded-2xl shadow-soft">
-              <p className="text-3xl md:text-4xl font-display font-bold text-primary">
-                {stat.number}
-              </p>
-              <p className="text-muted-foreground mt-1">{stat.label}</p>
-            </div>
           ))}
         </div>
       </div>
@@ -124,12 +75,9 @@ const GaleriaAlunas = () => {
               alt={fotos[selectedImage].alt}
               className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
             />
-            <p className="text-white text-center mt-4 text-lg">
-              {fotos[selectedImage].caption}
-            </p>
           </div>
           
-          {/* Navigation */}
+          {/* Navigation dots */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
             {fotos.map((_, index) => (
               <button
