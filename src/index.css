@@ -2,95 +2,117 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ========================================
+   DESIGN SYSTEM - Curso de Costura
+   Paleta: Turquesa artesanal + Rosa delicado
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    /* ===== Brand Colors (HSL) ===== */
+    --brand-1: 174 50% 45%;           /* Turquesa principal */
+    --brand-2: 340 45% 65%;           /* Rosa artesanal */
+    --brand-3: 174 55% 35%;           /* Turquesa escuro */
+    --accent: 35 85% 60%;             /* Dourado/Mostarda */
+    --accent-warm: 340 50% 55%;       /* Rosa intenso */
+    
+    /* ===== Semantic Colors ===== */
+    --background: 30 20% 98%;         /* Off-white quente */
+    --foreground: 220 25% 15%;        /* Preto suave */
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 220 25% 15%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
+    --popover-foreground: 220 25% 15%;
+    
+    --primary: 174 50% 45%;           /* Turquesa */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 340 35% 92%;         /* Rosa claro */
+    --secondary-foreground: 340 45% 35%;
+    
+    --muted: 30 15% 94%;
+    --muted-foreground: 220 15% 45%;
+    
+    --accent: 35 85% 60%;
+    --accent-foreground: 220 25% 15%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 174 50% 45%;
+    
+    --radius: 0.75rem;
+    
+    /* ===== Spacing Scale ===== */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+    --space-5: 2rem;
+    --space-6: 3rem;
+    --space-7: 4rem;
+    --space-8: 6rem;
+    
+    /* ===== Typography ===== */
+    --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    
+    /* ===== Shadows ===== */
+    --shadow-soft: 0 4px 20px -4px hsl(174 50% 45% / 0.15);
+    --shadow-medium: 0 8px 30px -6px hsl(220 25% 15% / 0.12);
+    --shadow-large: 0 20px 50px -12px hsl(220 25% 15% / 0.2);
+    --shadow-glow: 0 0 40px hsl(174 50% 45% / 0.25);
+    --shadow-pink: 0 8px 30px -6px hsl(340 45% 65% / 0.3);
+    
+    /* ===== Gradients ===== */
+    --gradient-hero: linear-gradient(135deg, hsl(174 50% 45%) 0%, hsl(174 55% 35%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(340 45% 65%) 0%, hsl(340 50% 55%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(30 20% 98%) 0%, hsl(30 15% 94%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.9) 0%, hsl(0 0% 100% / 0.7) 100%);
+    
+    /* ===== Animation Durations ===== */
+    --duration-fast: 200ms;
+    --duration-normal: 400ms;
+    --duration-slow: 600ms;
+    --duration-slower: 1000ms;
+    
+    /* ===== Easings ===== */
+    --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+    
+    /* Sidebar vars (keeping defaults) */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 220 25% 8%;
+    --foreground: 30 20% 95%;
+    --card: 220 25% 12%;
+    --card-foreground: 30 20% 95%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 30 20% 95%;
+    --primary: 174 50% 50%;
+    --primary-foreground: 220 25% 8%;
+    --secondary: 340 30% 20%;
+    --secondary-foreground: 340 35% 85%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 15% 60%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 174 50% 50%;
   }
 }
 
@@ -98,8 +120,403 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+  
+  ::selection {
+    background: hsl(var(--primary) / 0.2);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  /* ===== Hero Section Styles ===== */
+  .hero-section {
+    @apply relative overflow-hidden;
+    background: var(--gradient-hero);
+  }
+  
+  .hero-title {
+    font-family: var(--font-display);
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+    letter-spacing: -0.03em;
+  }
+  
+  .hero-subtitle {
+    @apply text-lg md:text-xl opacity-90;
+    font-weight: 400;
+  }
+  
+  /* ===== Section Styles ===== */
+  .section-title {
+    font-family: var(--font-display);
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold mb-4;
+    letter-spacing: -0.02em;
+  }
+  
+  .section-subtitle {
+    @apply text-muted-foreground text-lg max-w-2xl mx-auto;
+  }
+  
+  /* ===== Card Styles ===== */
+  .card-glass {
+    @apply backdrop-blur-md rounded-2xl p-6;
+    background: var(--gradient-glass);
+    box-shadow: var(--shadow-medium);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+  
+  .card-elevated {
+    @apply bg-card rounded-2xl p-6 transition-all;
+    box-shadow: var(--shadow-soft);
+    transition: transform var(--duration-normal) var(--ease-smooth),
+                box-shadow var(--duration-normal) var(--ease-smooth);
+  }
+  
+  .card-elevated:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-large);
+  }
+  
+  /* ===== Button Variants ===== */
+  .btn-hero {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-lg;
+    @apply bg-white text-primary transition-all;
+    box-shadow: var(--shadow-medium);
+    transition: transform var(--duration-fast) var(--ease-smooth),
+                box-shadow var(--duration-fast) var(--ease-smooth);
+  }
+  
+  .btn-hero:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: var(--shadow-large);
+  }
+  
+  .btn-hero:active {
+    transform: translateY(0) scale(0.98);
+  }
+  
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-3 px-6 py-4 rounded-full font-semibold;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    @apply text-white transition-all;
+    box-shadow: 0 8px 25px -6px rgba(37, 211, 102, 0.4);
+  }
+  
+  .btn-whatsapp:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 12px 35px -6px rgba(37, 211, 102, 0.5);
+  }
+  
+  .btn-secondary-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium;
+    @apply border-2 border-white/30 text-white backdrop-blur-sm transition-all;
+  }
+  
+  .btn-secondary-outline:hover {
+    @apply bg-white/10 border-white/50;
+  }
+  
+  /* ===== WhatsApp Floating Button ===== */
+  .whatsapp-float {
+    @apply fixed bottom-6 right-6 z-50;
+    @apply flex items-center gap-3 px-5 py-3 rounded-full;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    @apply text-white font-semibold shadow-lg;
+    box-shadow: 0 8px 30px -6px rgba(37, 211, 102, 0.5);
+    transition: transform var(--duration-fast) var(--ease-bounce),
+                box-shadow var(--duration-fast) var(--ease-smooth);
+  }
+  
+  .whatsapp-float:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 12px 40px -6px rgba(37, 211, 102, 0.6);
+  }
+  
+  /* ===== Decorative Elements ===== */
+  .yarn-ball {
+    @apply absolute rounded-full opacity-20;
+    background: var(--gradient-warm);
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  .stitch-line {
+    @apply absolute h-0.5 bg-primary/30;
+    background: repeating-linear-gradient(
+      90deg,
+      hsl(var(--primary)) 0px,
+      hsl(var(--primary)) 8px,
+      transparent 8px,
+      transparent 16px
+    );
+  }
+  
+  /* ===== Image Styles ===== */
+  .image-frame {
+    @apply rounded-2xl overflow-hidden;
+    box-shadow: var(--shadow-large);
+  }
+  
+  .image-polaroid {
+    @apply bg-white p-3 pb-12 rounded-lg rotate-[-2deg];
+    box-shadow: var(--shadow-medium);
+  }
+  
+  /* ===== Testimonial Card ===== */
+  .testimonial-card {
+    @apply bg-card rounded-2xl p-6 relative;
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .testimonial-card::before {
+    content: '"';
+    @apply absolute -top-4 left-6 text-6xl text-primary/20;
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  /* ===== Animations ===== */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+  }
+  
+  @keyframes float-slow {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    33% {
+      transform: translateY(-15px) translateX(10px);
+    }
+    66% {
+      transform: translateY(-8px) translateX(-5px);
+    }
+  }
+  
+  @keyframes sew-line {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes needle-move {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes pulse-soft {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.02);
+    }
+  }
+  
+  @keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scale-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes sewing-machine {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+  
+  @keyframes thread-wave {
+    0%, 100% {
+      d: path("M0,10 Q25,5 50,10 T100,10");
+    }
+    50% {
+      d: path("M0,10 Q25,15 50,10 T100,10");
+    }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-float-slow {
+    animation: float-slow 10s ease-in-out infinite;
+  }
+  
+  .animate-float-delayed {
+    animation: float 8s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+  
+  .animate-sew {
+    animation: sew-line 2s ease-out forwards;
+  }
+  
+  .animate-needle {
+    animation: needle-move 3s ease-in-out infinite;
+  }
+  
+  .animate-pulse-soft {
+    animation: pulse-soft 3s ease-in-out infinite;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.6s var(--ease-smooth) forwards;
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.5s var(--ease-smooth) forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.5s var(--ease-smooth) forwards;
+  }
+  
+  .animate-sewing-machine {
+    animation: sewing-machine 0.3s ease-in-out infinite;
+  }
+  
+  /* Animation delays */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  
+  /* ===== Parallax Layers ===== */
+  .parallax-slow {
+    transform: translateZ(-2px) scale(3);
+  }
+  
+  .parallax-medium {
+    transform: translateZ(-1px) scale(2);
+  }
+  
+  /* ===== Glassmorphism ===== */
+  .glass {
+    @apply backdrop-blur-md bg-white/70;
+    border: 1px solid hsl(var(--border) / 0.3);
+  }
+  
+  .glass-dark {
+    @apply backdrop-blur-md bg-black/30;
+    border: 1px solid hsl(var(--border) / 0.2);
+  }
+  
+  /* ===== Text Gradient ===== */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+  
+  .text-gradient-warm {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-warm);
+  }
+  
+  /* ===== Hover Effects ===== */
+  .hover-lift {
+    transition: transform var(--duration-normal) var(--ease-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px);
+  }
+  
+  .hover-scale {
+    transition: transform var(--duration-fast) var(--ease-smooth);
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ===== 3D Tilt Effect (subtle) ===== */
+  .tilt-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  /* ===== Stitch Border ===== */
+  .stitch-border {
+    border: 2px dashed hsl(var(--primary) / 0.4);
+    border-radius: var(--radius);
+  }
+  
+  /* ===== Reduced Motion ===== */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    
+    .animate-float,
+    .animate-float-slow,
+    .animate-float-delayed,
+    .animate-needle,
+    .animate-sewing-machine {
+      animation: none !important;
+    }
   }
 }
