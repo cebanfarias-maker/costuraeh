@@ -1,4 +1,5 @@
 import { MessageCircle, MapPin, Phone, Instagram } from "lucide-react";
+import logo from "@/assets/logo-costuraeh.png";
 
 const WHATSAPP_NUMBER = "5511993223183";
 const WHATSAPP_MESSAGE = encodeURIComponent("Olá! Vim pelo site e quero saber sobre as aulas de costura, por favor.");
@@ -13,11 +14,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-2xl">🧵</span>
-              <span className="text-lg font-display text-background">
-                CosturaEh
-              </span>
+            <div className="mb-4">
+              <img 
+                src={logo} 
+                alt="CosturaEh" 
+                className="h-16 w-auto brightness-0 invert opacity-90"
+              />
             </div>
             <p className="text-background/60 text-sm mb-4">
               Curso de Costura Criativa para Iniciantes<br />
