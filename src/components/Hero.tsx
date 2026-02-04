@@ -1,5 +1,6 @@
 import { MessageCircle, MapPin } from "lucide-react";
 import heroImage from "@/assets/alunas-3.webp";
+import logo from "@/assets/logo-costuraeh.png";
 
 const WHATSAPP_NUMBER = "5511993223183";
 const WHATSAPP_MESSAGE = encodeURIComponent("Olá! Vim pelo site e quero saber sobre as aulas de costura, por favor.");
@@ -9,7 +10,20 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center bg-background">
-      <div className="container mx-auto px-4 py-20 md:py-28">
+      {/* Logo Header */}
+      <div className="absolute top-0 left-0 right-0 py-4 z-10">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-center lg:justify-start">
+            <img 
+              src={logo} 
+              alt="CosturaEh - Cursos Criativos para Adultos e Crianças" 
+              className="h-20 md:h-24 w-auto"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 py-20 md:py-28 pt-32 md:pt-36">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left">

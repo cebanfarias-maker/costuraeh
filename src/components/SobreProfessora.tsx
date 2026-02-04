@@ -21,14 +21,16 @@ const SobreProfessora = () => {
                 </div>
               </div>
               
-              {/* Bio placeholder */}
+              {/* Bio */}
               <div className="text-center md:text-left flex-1">
                 <h3 className="text-2xl font-display text-foreground mb-4">
-                  [Nome da Professora]
+                  Daniela (Dani)
                 </h3>
                 
-                <p className="text-muted-foreground mb-6 italic">
-                  [Bio da professora será adicionada aqui - história, experiência e paixão pela costura]
+                <p className="text-muted-foreground mb-6">
+                  Professora apaixonada por ensinar costura criativa, reconhecida pelo carinho, 
+                  paciência e atenção individual que dedica a cada aluna. Seu ateliê é descrito 
+                  pelas alunas como um espaço acolhedor, onde são recebidas com chá, bolachas e muito amor.
                 </p>
                 
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start">
@@ -38,11 +40,11 @@ const SobreProfessora = () => {
                   </span>
                   <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 text-accent text-sm">
                     <Award className="w-4 h-4" />
-                    [Anos de experiência]
+                    Ensino personalizado
                   </span>
                   <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm">
                     <Sparkles className="w-4 h-4" />
-                    [Especialidade]
+                    Costura criativa
                   </span>
                 </div>
               </div>
@@ -51,7 +53,7 @@ const SobreProfessora = () => {
             {/* Nota de edição */}
             <div className="mt-6 pt-6 border-t border-border">
               <p className="text-muted-foreground/60 text-xs text-center italic">
-                ⚠️ Esta seção será preenchida com as informações reais da professora
+                ⚠️ Mais informações e foto da professora serão adicionadas em breve
               </p>
             </div>
           </div>
