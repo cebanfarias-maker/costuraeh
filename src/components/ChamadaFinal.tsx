@@ -11,12 +11,12 @@ const ChamadaFinal = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display mb-6">
-            Venha conhecer nosso espaço
+            Comece sua jornada na costura
           </h2>
           
           <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Agende uma aula experimental e descubra como a costura pode ser 
-            prazerosa e transformadora.
+            Agende uma aula experimental e descubra como a costura pode transformar 
+            sua vida — seja por hobby ou para gerar renda extra.
           </p>
           
           <a
@@ -27,7 +27,7 @@ const ChamadaFinal = () => {
             aria-label="Agendar aula experimental no WhatsApp"
           >
             <MessageCircle className="w-6 h-6" />
-            Agendar aula experimental
+            Quero saber mais no WhatsApp
           </a>
           
           <div className="flex flex-wrap justify-center gap-6 mt-12 text-primary-foreground/80 text-sm">
@@ -37,7 +37,7 @@ const ChamadaFinal = () => {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="w-4 h-4" />
-              Abre às 14:00
+              Seg a Sex: 14h às 18h
             </span>
           </div>
         </div>
