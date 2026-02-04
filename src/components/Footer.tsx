@@ -20,7 +20,8 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-background/60 text-sm mb-4">
-              Costura Criativa para Adultos e Crianças
+              Curso de Costura Criativa para Iniciantes<br />
+              100% Presencial em São Paulo
             </p>
             <a
               href={whatsappLink}
@@ -47,6 +48,17 @@ const Footer = () => {
                 <Phone className="w-4 h-4" />
                 (11) 99322-3183
               </li>
+              <li>
+                <a 
+                  href="https://instagram.com/costuraeh.criativa" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-background/70 hover:text-background transition-colors"
+                >
+                  <Instagram className="w-4 h-4" />
+                  @costuraeh.criativa
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -55,8 +67,13 @@ const Footer = () => {
             <h4 className="font-medium text-background mb-4">Navegação</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#proposta" className="text-background/70 hover:text-background transition-colors">
-                  Sobre nós
+                <a href="#sobre" className="text-background/70 hover:text-background transition-colors">
+                  Sobre o Curso
+                </a>
+              </li>
+              <li>
+                <a href="#como-funciona" className="text-background/70 hover:text-background transition-colors">
+                  Como Funciona
                 </a>
               </li>
               <li>
@@ -65,14 +82,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://instagram.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-background/70 hover:text-background transition-colors"
-                >
-                  <Instagram className="w-4 h-4" />
-                  Instagram
+                <a href="#localizacao" className="text-background/70 hover:text-background transition-colors">
+                  Localização
                 </a>
               </li>
             </ul>

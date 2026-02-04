@@ -19,13 +19,14 @@ const Hero = () => {
             </div>
             
             <h1 className="section-title text-foreground mb-6 animate-fade-in delay-100">
-              Costura Criativa para{" "}
-              <span className="text-gradient">Adultos e Crianças</span>
+              Curso de{" "}
+              <span className="text-gradient">Costura Criativa</span>{" "}
+              para Iniciantes
             </h1>
             
             <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in delay-200">
-              Aulas presenciais em um espaço acolhedor. Aprenda a costurar no seu ritmo, 
-              com atenção individual e todo o suporte que você precisa.
+              Aulas presenciais com atendimento individual. Aprenda no seu ritmo, 
+              com atenção personalizada e todo o carinho que você merece.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in delay-300">
@@ -34,14 +35,14 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp"
-                aria-label="Quero saber mais no WhatsApp"
+                aria-label="Agendar aula experimental no WhatsApp"
               >
                 <MessageCircle className="w-5 h-5" />
                 Agendar aula experimental
               </a>
               
               <a href="#galeria" className="btn-outline">
-                Ver trabalhos
+                Ver trabalhos das alunas
               </a>
             </div>
             
@@ -49,15 +50,15 @@ const Hero = () => {
             <div className="flex flex-wrap items-center gap-4 mt-10 justify-center lg:justify-start text-sm text-muted-foreground animate-fade-in delay-300">
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-primary rounded-full" />
-                Aulas presenciais
+                100% Presencial
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-accent rounded-full" />
-                Todas as idades
+                Atendimento Individual
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-primary rounded-full" />
-                Turmas reduzidas
+                Agende seus horários
               </span>
             </div>
           </div>
@@ -67,14 +68,14 @@ const Hero = () => {
             <div className="relative rounded-3xl overflow-hidden shadow-large">
               <img
                 src={heroImage}
-                alt="Aula de costura criativa"
+                alt="Aula presencial de costura criativa"
                 className="w-full h-auto object-cover aspect-[4/5]"
                 loading="eager"
               />
             </div>
             
             {/* Floating card */}
-            <div className="absolute -bottom-4 -left-4 md:bottom-8 md:-left-8 bg-card rounded-2xl p-4 shadow-medium">
+            <div className="absolute -bottom-4 -left-4 md:bottom-8 md:-left-8 bg-card rounded-2xl p-4 shadow-medium border border-border">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                   <span className="text-2xl">🧵</span>
