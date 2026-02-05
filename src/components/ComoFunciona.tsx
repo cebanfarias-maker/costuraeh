@@ -30,8 +30,11 @@ const horarios = [
 
 const ComoFunciona = () => {
   return (
-    <section id="como-funciona" className="py-20 md:py-28 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="como-funciona" className="py-20 md:py-28 bg-background relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 sewing-pattern opacity-30" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="section-title text-foreground mb-4">
             Como <span className="text-gradient">Funcionam</span> as Aulas
@@ -46,9 +49,9 @@ const ComoFunciona = () => {
           {infoCards.map((card, index) => (
             <div 
               key={index}
-              className="card-elevated text-center"
+              className="card-elevated text-center group"
             >
-              <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center">
+              <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <card.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-xl font-display text-foreground mb-2">

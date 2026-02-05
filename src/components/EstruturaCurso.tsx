@@ -2,8 +2,11 @@ import { BookOpen, Layers } from "lucide-react";
 
 const EstruturaCurso = () => {
   return (
-    <section id="estrutura" className="py-20 md:py-28 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section id="estrutura" className="py-20 md:py-28 bg-secondary/30 relative overflow-hidden">
+      {/* Decorative stitch */}
+      <div className="absolute top-0 left-0 right-0 stitch-line" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="section-title text-foreground mb-4">
             Estrutura do <span className="text-gradient">Curso</span>
@@ -15,9 +18,9 @@ const EstruturaCurso = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Módulo 1 */}
-          <div className="card-elevated">
+          <div className="card-elevated group">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <BookOpen className="w-7 h-7 text-primary" />
               </div>
               <div>
@@ -31,9 +34,9 @@ const EstruturaCurso = () => {
           </div>
 
           {/* Módulo 2 */}
-          <div className="card-elevated">
+          <div className="card-elevated group">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 rounded-2xl bg-accent/20 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Layers className="w-7 h-7 text-accent" />
               </div>
               <div>
@@ -54,6 +57,8 @@ const EstruturaCurso = () => {
           </p>
         </div>
       </div>
+      
+      <div className="absolute bottom-0 left-0 right-0 stitch-line" />
     </section>
   );
 };

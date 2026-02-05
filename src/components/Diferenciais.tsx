@@ -25,8 +25,12 @@ const diferenciais = [
 
 const Diferenciais = () => {
   return (
-    <section id="diferenciais" className="py-20 md:py-28 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="diferenciais" className="py-20 md:py-28 bg-background relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-10 left-10 w-32 h-32 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 right-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="section-title text-foreground mb-4">
             Nossos <span className="text-gradient">Diferenciais</span>

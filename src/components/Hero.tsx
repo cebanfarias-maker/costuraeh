@@ -9,7 +9,14 @@ const Hero = () => {
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 
   return (
-    <section className="relative min-h-screen flex items-center bg-background">
+    <section className="relative min-h-screen flex items-center bg-background overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 sewing-pattern opacity-40" />
+      
+      {/* Decorative circles */}
+      <div className="absolute top-20 right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-10 w-48 h-48 bg-accent/5 rounded-full blur-3xl" />
+
       {/* Logo Header */}
       <div className="absolute top-0 left-0 right-0 py-4 z-10">
         <div className="container mx-auto px-4">
@@ -23,7 +30,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-20 md:py-28 pt-32 md:pt-36">
+      <div className="container mx-auto px-4 py-20 md:py-28 pt-32 md:pt-36 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left">
@@ -72,7 +79,7 @@ const Hero = () => {
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-primary rounded-full" />
-                Agende seus horários
+                Desde 2018
               </span>
             </div>
           </div>
@@ -103,6 +110,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* Bottom stitch decoration */}
+      <div className="absolute bottom-0 left-0 right-0 stitch-line" />
     </section>
   );
 };

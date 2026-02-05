@@ -7,8 +7,13 @@ const ChamadaFinal = () => {
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 
   return (
-    <section className="py-20 md:py-28 bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4">
+    <section className="py-20 md:py-28 bg-primary text-primary-foreground relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-accent/30" />
+      <div className="absolute -top-20 -right-20 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
+      <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-white/5 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display mb-6">
             Comece sua jornada na costura
