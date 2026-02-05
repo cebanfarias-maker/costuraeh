@@ -9,7 +9,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-foreground text-background/80 py-12">
+    <footer className="bg-foreground text-background/80 py-12 relative overflow-hidden">
+      {/* Decorative top border */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary" />
+      
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
@@ -23,7 +26,8 @@ const Footer = () => {
             </div>
             <p className="text-background/60 text-sm mb-4">
               Curso de Costura Criativa para Iniciantes<br />
-              100% Presencial em São Paulo
+              100% Presencial em São Paulo<br />
+              <span className="text-primary/70">Desde 2018</span>
             </p>
             <a
               href={whatsappLink}

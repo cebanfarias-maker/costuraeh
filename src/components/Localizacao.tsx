@@ -1,27 +1,31 @@
-import { MapPin, Clock, Phone, Instagram } from "lucide-react";
+import { MapPin, Clock, Instagram } from "lucide-react";
 import { MessageCircle } from "lucide-react";
 
 const WHATSAPP_NUMBER = "5511993223183";
 const WHATSAPP_MESSAGE = encodeURIComponent("Olá! Vim pelo site e quero saber sobre as aulas de costura, por favor.");
 
 const horarioFuncionamento = [
-  { dia: "Segunda-feira", horario: "14h às 18h" },
-  { dia: "Terça-feira", horario: "14h às 18h" },
-  { dia: "Quarta-feira", horario: "14h às 18h" },
-  { dia: "Quinta-feira", horario: "14h às 18h" },
-  { dia: "Sexta-feira", horario: "14h às 18h" },
+  { dia: "Segunda", horario: "14h às 18h" },
+  { dia: "Terça", horario: "14h às 18h" },
+  { dia: "Quarta", horario: "14h às 18h" },
+  { dia: "Quinta", horario: "14h às 18h" },
+  { dia: "Sexta", horario: "14h às 18h" },
   { dia: "Sábado", horario: "Fechado" },
   { dia: "Domingo", horario: "Fechado" },
 ];
 
 const Localizacao = () => {
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
-  const googleMapsEmbed = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1234567890!2d-46.6234567890!3d-23.4567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDI3JzI0LjQiUyA0NsKwMzcnMjQuNCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890123";
+  const googleMapsEmbed = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.1977036898714!2d-46.634098!3d-23.486944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef7e7b8e98f0f%3A0x0!2sR.%20Gen.%20Nestor%20Passos%2C%20256%20-%20Jardim%20Para%C3%ADso%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000";
   const googleMapsLink = "https://www.google.com/maps/search/?api=1&query=R.+Gen.+Nestor+Passos,+256+-+Jardim+Paraíso,+São+Paulo+-+SP,+02417-140";
 
   return (
-    <section id="localizacao" className="py-20 md:py-28 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section id="localizacao" className="py-20 md:py-28 bg-secondary/30 relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 right-0 stitch-line" />
+      <div className="absolute -top-20 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="section-title text-foreground mb-4">
             <span className="text-gradient">Localização</span> e Contato
@@ -65,7 +69,7 @@ const Localizacao = () => {
             {/* Endereço */}
             <div className="card-elevated">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -82,7 +86,7 @@ const Localizacao = () => {
             {/* Horários */}
             <div className="card-elevated">
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center flex-shrink-0">
                   <Clock className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -99,7 +103,7 @@ const Localizacao = () => {
                         : "bg-background"
                     }`}
                   >
-                    <span className="text-muted-foreground">{item.dia.slice(0, 3)}</span>
+                    <span className="text-muted-foreground">{item.dia}</span>
                     <span className={item.horario === "Fechado" ? "text-destructive/70" : "text-foreground font-medium"}>
                       {item.horario}
                     </span>

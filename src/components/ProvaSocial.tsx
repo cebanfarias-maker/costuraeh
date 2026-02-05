@@ -1,4 +1,5 @@
-import { Star, Quote } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
 const depoimentos = [
   {
@@ -20,10 +21,37 @@ const depoimentos = [
 ];
 
 const ProvaSocial = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % depoimentos.length);
+  }, []);
+
+  const prevSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + depoimentos.length) % depoimentos.length);
+  }, []);
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+    setIsAutoPlaying(false);
+  };
+
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    
+    const interval = setInterval(nextSlide, 6000);
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, nextSlide]);
+
   return (
-    <section id="depoimentos" className="py-20 md:py-28 bg-secondary/30">
+    <section id="depoimentos" className="py-20 md:py-28 bg-secondary/30 relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-10 left-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/5 rounded-full blur-3xl" />
+      
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="section-title text-foreground mb-4">
             O que nossas alunas <span className="text-gradient">dizem</span>
           </h2>
@@ -32,38 +60,99 @@ const ProvaSocial = () => {
           </p>
         </div>
 
-        {/* Depoimentos reais */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {depoimentos.map((depoimento, index) => (
+        {/* Carousel Container */}
+        <div className="max-w-4xl mx-auto relative">
+          {/* Navigation Buttons - Desktop */}
+          <button
+            onClick={() => { prevSlide(); setIsAutoPlaying(false); }}
+            className="hidden md:flex absolute -left-16 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-card shadow-medium items-center justify-center text-muted-foreground hover:text-foreground hover:shadow-large transition-all z-10"
+            aria-label="Depoimento anterior"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          
+          <button
+            onClick={() => { nextSlide(); setIsAutoPlaying(false); }}
+            className="hidden md:flex absolute -right-16 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-card shadow-medium items-center justify-center text-muted-foreground hover:text-foreground hover:shadow-large transition-all z-10"
+            aria-label="Próximo depoimento"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Testimonial Card */}
+          <div className="overflow-hidden">
             <div 
-              key={index}
-              className="card-elevated relative"
+              className="flex transition-transform duration-500 ease-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              <Quote className="absolute top-6 right-6 w-8 h-8 text-primary/20" />
-              
-              <div className="flex items-center gap-1 mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-4 h-4 text-amber-400 fill-amber-400" />
-                ))}
-              </div>
-              
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                "{depoimento.texto}"
-              </p>
-              
-              <div className="flex items-center gap-3 pt-4 border-t border-border">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <span className="text-primary font-medium text-sm">
-                    {depoimento.nome.charAt(0)}
-                  </span>
+              {depoimentos.map((depoimento, index) => (
+                <div 
+                  key={index}
+                  className="w-full flex-shrink-0 px-2"
+                >
+                  <div className="card-elevated relative bg-card p-8 md:p-10">
+                    <Quote className="absolute top-6 right-6 w-10 h-10 text-primary/15" />
+                    
+                    <div className="flex items-center gap-1 mb-6">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 text-amber-400 fill-amber-400" />
+                      ))}
+                    </div>
+                    
+                    <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8">
+                      "{depoimento.texto}"
+                    </p>
+                    
+                    <div className="flex items-center gap-4 pt-6 border-t border-border">
+                      <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                        <span className="text-primary font-semibold text-lg">
+                          {depoimento.nome.charAt(0)}
+                        </span>
+                      </div>
+                      <div>
+                        <p className="text-foreground font-medium text-lg">{depoimento.nome}</p>
+                        <p className="text-muted-foreground text-sm">Aluna do curso</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-foreground font-medium text-sm">{depoimento.nome}</p>
-                  <p className="text-muted-foreground text-xs">Aluna do curso</p>
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Navigation Dots */}
+          <div className="flex justify-center items-center gap-3 mt-8">
+            {/* Mobile prev button */}
+            <button
+              onClick={() => { prevSlide(); setIsAutoPlaying(false); }}
+              className="md:hidden w-10 h-10 rounded-full bg-card shadow-soft flex items-center justify-center text-muted-foreground"
+              aria-label="Depoimento anterior"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+            {depoimentos.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  currentIndex === index 
+                    ? "w-8 bg-primary" 
+                    : "w-2.5 bg-primary/30 hover:bg-primary/50"
+                }`}
+                aria-label={`Ver depoimento ${index + 1}`}
+              />
+            ))}
+
+            {/* Mobile next button */}
+            <button
+              onClick={() => { nextSlide(); setIsAutoPlaying(false); }}
+              className="md:hidden w-10 h-10 rounded-full bg-card shadow-soft flex items-center justify-center text-muted-foreground"
+              aria-label="Próximo depoimento"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         {/* Nota sobre mais avaliações */}

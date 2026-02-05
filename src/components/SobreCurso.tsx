@@ -23,8 +23,13 @@ const oQueAprende = [
 
 const SobreCurso = () => {
   return (
-    <section id="sobre" className="py-20 md:py-28 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section id="sobre" className="py-20 md:py-28 bg-secondary/30 relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 right-0 stitch-line" />
+      <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-accent/5 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="section-title text-foreground mb-4">
             Sobre o <span className="text-gradient">Curso</span>
@@ -34,7 +39,7 @@ const SobreCurso = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Para quem é */}
           <div className="card-elevated">
             <h3 className="text-2xl font-display text-foreground mb-6">
@@ -74,6 +79,8 @@ const SobreCurso = () => {
           </div>
         </div>
       </div>
+      
+      <div className="absolute bottom-0 left-0 right-0 stitch-line" />
     </section>
   );
 };

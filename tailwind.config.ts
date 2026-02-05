@@ -56,11 +56,11 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         brand: {
-          primary: "hsl(174 50% 45%)",
-          secondary: "hsl(340 45% 65%)",
-          dark: "hsl(174 55% 35%)",
-          accent: "hsl(35 85% 60%)",
-          warm: "hsl(340 50% 55%)",
+          tiffany: "hsl(174 50% 67%)",
+          "tiffany-dark": "hsl(174 45% 45%)",
+          pink: "hsl(350 60% 88%)",
+          "pink-dark": "hsl(350 50% 70%)",
+          cream: "hsl(40 40% 96%)",
         },
         whatsapp: {
           DEFAULT: "#25D366",

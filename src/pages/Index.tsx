@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Hero from "@/components/Hero";
+import Manifesto from "@/components/Manifesto";
 import SobreCurso from "@/components/SobreCurso";
 import ComoFunciona from "@/components/ComoFunciona";
 import EstruturaCurso from "@/components/EstruturaCurso";
@@ -34,6 +35,7 @@ const Index = () => {
       telephone: "+55-11-99322-3183",
       openingHours: ["Mo-Fr 14:00-18:00"],
       priceRange: "$$",
+      foundingDate: "2018",
     });
     document.head.appendChild(script);
 
@@ -46,6 +48,7 @@ const Index = () => {
     <main className="min-h-screen">
       <ThemeToggle />
       <Hero />
+      <Manifesto />
       <SobreCurso />
       <ComoFunciona />
       <EstruturaCurso />
