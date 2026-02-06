@@ -1,11 +1,15 @@
 import { Heart, Award, Sparkles } from "lucide-react";
+import professoraDani from "@/assets/professora-dani.png";
 
 const SobreProfessora = () => {
   return (
     <section id="professora" className="py-20 md:py-28 bg-background relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-10 right-10 w-32 h-32 bg-accent/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-10 left-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute top-10 right-10 w-32 h-32 bg-accent/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl" />
+      
+      {/* Animated stitch line */}
+      <div className="absolute top-0 left-0 right-0 stitch-line animate-stitch" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
@@ -17,12 +21,13 @@ const SobreProfessora = () => {
         <div className="max-w-3xl mx-auto">
           <div className="card-elevated">
             <div className="flex flex-col md:flex-row gap-8 items-center">
-              {/* Placeholder para foto */}
-              <div className="w-40 h-40 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0 border-2 border-dashed border-border">
-                <div className="text-center">
-                  <span className="text-4xl mb-2 block">👩‍🏫</span>
-                  <span className="text-muted-foreground/60 text-xs">Foto em breve</span>
-                </div>
+              {/* Foto da professora */}
+              <div className="w-40 h-40 rounded-2xl overflow-hidden flex-shrink-0 shadow-medium ring-4 ring-primary/20">
+                <img 
+                  src={professoraDani} 
+                  alt="Professora Daniela (Dani) - CosturaEh" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               {/* Bio */}
@@ -53,16 +58,11 @@ const SobreProfessora = () => {
                 </div>
               </div>
             </div>
-            
-            {/* Nota de edição */}
-            <div className="mt-6 pt-6 border-t border-border">
-              <p className="text-muted-foreground/60 text-xs text-center italic">
-                ⚠️ Mais informações e foto da professora serão adicionadas em breve
-              </p>
-            </div>
           </div>
         </div>
       </div>
+      
+      <div className="absolute bottom-0 left-0 right-0 stitch-line animate-stitch" />
     </section>
   );
 };

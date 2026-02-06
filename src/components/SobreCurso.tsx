@@ -23,9 +23,9 @@ const oQueAprende = [
 
 const SobreCurso = () => {
   return (
-    <section id="sobre" className="py-20 md:py-28 bg-secondary/30 relative overflow-hidden">
+    <section id="sobre" className="py-20 md:py-28 bg-gradient-to-b from-secondary/50 to-secondary/30 relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 right-0 stitch-line" />
+      <div className="absolute top-0 left-0 right-0 stitch-line animate-stitch" />
       <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-accent/5 rounded-full blur-3xl" />
       
@@ -80,7 +80,7 @@ const SobreCurso = () => {
         </div>
       </div>
       
-      <div className="absolute bottom-0 left-0 right-0 stitch-line" />
+      <div className="absolute bottom-0 left-0 right-0 stitch-line animate-stitch" />
     </section>
   );
 };

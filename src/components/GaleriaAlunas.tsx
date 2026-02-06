@@ -6,6 +6,7 @@ import alunas2 from "@/assets/alunas-2.jpg";
 import alunas3 from "@/assets/alunas-3.webp";
 import alunas4 from "@/assets/alunas-4.webp";
 import alunas5 from "@/assets/alunas-5.jpg";
+import alunas6 from "@/assets/alunas-6.jpg";
 
 const fotos = [
   { src: alunas1, alt: "Aula de costura criativa" },
@@ -13,6 +14,7 @@ const fotos = [
   { src: alunas3, alt: "Momento de aprendizado" },
   { src: alunas4, alt: "Criações do ateliê" },
   { src: alunas5, alt: "Turma de costura" },
+  { src: alunas6, alt: "Alunas trabalhando no ateliê" },
 ];
 
 const GaleriaAlunas = () => {
@@ -34,9 +36,9 @@ const GaleriaAlunas = () => {
   }, [nextMobileSlide]);
 
   return (
-    <section id="galeria" className="py-20 md:py-28 bg-background relative">
+    <section id="galeria" className="py-20 md:py-28 bg-gradient-to-b from-background to-muted/40 relative">
       {/* Decorative stitch line */}
-      <div className="absolute top-0 left-0 right-0 stitch-line" />
+      <div className="absolute top-0 left-0 right-0 stitch-line animate-stitch" />
       
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
