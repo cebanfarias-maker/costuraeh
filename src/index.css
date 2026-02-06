@@ -20,15 +20,15 @@
     --brand-warm: 30 30% 94%;
     
     /* ===== Semantic Colors ===== */
-    /* Fundo principal com tom Tiffany suave */
-    --background: 174 40% 92%;
+    /* Fundo principal com tom Rosa/Tiffany */
+    --background: 350 45% 94%;
     --foreground: 220 20% 20%;
     
     /* Cards com tom Rosa pastel */
-    --card: 350 50% 96%;
+    --card: 350 55% 97%;
     --card-foreground: 220 20% 20%;
     
-    --popover: 350 50% 96%;
+    --popover: 350 55% 97%;
     --popover-foreground: 220 20% 20%;
     
     /* Primary = Tiffany Blue forte */
@@ -36,11 +36,11 @@
     --primary-foreground: 0 0% 100%;
     
     /* Secondary = Rosa pastel mais visível */
-    --secondary: 350 55% 90%;
+    --secondary: 350 60% 92%;
     --secondary-foreground: 350 40% 25%;
     
-    /* Muted com Tiffany */
-    --muted: 174 35% 88%;
+    /* Muted com mix rosa/tiffany */
+    --muted: 350 40% 90%;
     --muted-foreground: 220 15% 35%;
     
     /* Accent = Rosa mais forte */
@@ -50,36 +50,56 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    /* Bordas com Tiffany */
-    --border: 174 30% 82%;
-    --input: 174 30% 82%;
+    /* Bordas com rosa suave */
+    --border: 350 35% 85%;
+    --input: 350 35% 85%;
     --ring: 174 50% 50%;
     
     --radius: 1rem;
     
-    /* ===== Typography ===== */
+    /* ===== Fluid Typography ===== */
     --font-display: 'DM Serif Display', Georgia, serif;
     --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     
+    /* Fluid font sizes using clamp() */
+    --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+    --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+    --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+    --text-lg: clamp(1.125rem, 1rem + 0.6vw, 1.25rem);
+    --text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+    --text-2xl: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+    --text-3xl: clamp(1.875rem, 1.4rem + 2.4vw, 2.5rem);
+    --text-4xl: clamp(2.25rem, 1.6rem + 3.2vw, 3rem);
+    --text-5xl: clamp(3rem, 2rem + 5vw, 4rem);
+    
+    /* ===== Spacing Scale ===== */
+    --space-xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem);
+    --space-sm: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+    --space-md: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+    --space-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+    --space-xl: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+    --space-2xl: clamp(3rem, 2rem + 5vw, 5rem);
+    
     /* ===== Shadows with brand colors ===== */
-    --shadow-soft: 0 2px 15px -3px hsl(174 50% 45% / 0.15);
-    --shadow-medium: 0 8px 30px -8px hsl(174 50% 45% / 0.22);
-    --shadow-large: 0 20px 50px -15px hsl(174 50% 45% / 0.28);
+    --shadow-soft: 0 2px 15px -3px hsl(350 50% 60% / 0.12);
+    --shadow-medium: 0 8px 30px -8px hsl(350 50% 60% / 0.18);
+    --shadow-large: 0 20px 50px -15px hsl(350 50% 60% / 0.25);
     
     /* ===== Gradients ===== */
-    --gradient-hero: linear-gradient(135deg, hsl(174 50% 50%) 0%, hsl(174 55% 40%) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(350 60% 82%) 0%, hsl(350 55% 72%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(174 40% 92%) 0%, hsl(350 50% 92%) 100%);
-    --gradient-tiffany-pink: linear-gradient(135deg, hsl(174 45% 90%) 0%, hsl(350 55% 92%) 50%, hsl(174 40% 88%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(350 55% 92%) 0%, hsl(350 60% 88%) 50%, hsl(174 40% 90%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(350 60% 85%) 0%, hsl(350 55% 80%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(350 50% 94%) 0%, hsl(174 40% 92%) 100%);
+    --gradient-tiffany-pink: linear-gradient(135deg, hsl(350 55% 93%) 0%, hsl(174 45% 90%) 50%, hsl(350 50% 92%) 100%);
+    --gradient-pink-strong: linear-gradient(135deg, hsl(350 60% 90%) 0%, hsl(350 65% 85%) 50%, hsl(350 55% 88%) 100%);
     
     /* Sidebar vars */
-    --sidebar-background: 174 35% 93%;
+    --sidebar-background: 350 40% 95%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 350 50% 92%;
     --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 174 25% 85%;
+    --sidebar-border: 350 30% 88%;
     --sidebar-ring: 174 50% 50%;
   }
 
@@ -134,25 +154,47 @@
 }
 
 @layer components {
-  /* ===== Section Styles ===== */
+  /* ===== Hero Gradient - Rosa forte ===== */
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(350 60% 92%) 0%,
+      hsl(350 65% 89%) 25%,
+      hsl(350 55% 91%) 50%,
+      hsl(174 35% 90%) 75%,
+      hsl(350 50% 93%) 100%
+    );
+  }
+  
+  /* ===== Section Styles with Fluid Typography ===== */
   .section-title {
     font-family: var(--font-display);
-    @apply text-3xl md:text-4xl lg:text-5xl mb-4;
+    font-size: var(--text-4xl);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    @apply mb-4;
   }
   
   .section-subtitle {
-    @apply text-muted-foreground text-lg max-w-2xl mx-auto;
+    font-size: var(--text-lg);
+    @apply text-muted-foreground max-w-2xl mx-auto;
   }
   
-  /* ===== Card Styles ===== */
+  /* ===== Card Styles with Micro-interactions ===== */
   .card-elevated {
-    @apply bg-card rounded-2xl p-6 transition-all;
+    @apply bg-card rounded-2xl transition-all duration-300 ease-out;
+    padding: var(--space-md);
     box-shadow: var(--shadow-soft);
+    will-change: transform, box-shadow;
   }
   
   .card-elevated:hover {
-    transform: translateY(-2px);
+    transform: translateY(-4px) scale(1.01);
     box-shadow: var(--shadow-medium);
+  }
+  
+  .card-elevated:active {
+    transform: translateY(-2px) scale(1.005);
   }
   
   /* ===== Button Variants ===== */
@@ -315,15 +357,33 @@
   .delay-200 { animation-delay: 200ms; }
   .delay-300 { animation-delay: 300ms; }
   
-  /* ===== Text Gradient ===== */
+  /* ===== Text Gradient - Rosa/Tiffany ===== */
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-hero);
+    background-image: linear-gradient(135deg, hsl(174 55% 45%) 0%, hsl(350 55% 60%) 100%);
   }
 
   .text-gradient-pink {
     @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-warm);
+    background-image: linear-gradient(135deg, hsl(350 60% 65%) 0%, hsl(350 55% 55%) 100%);
+  }
+  
+  /* ===== Micro-interactions ===== */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+    will-change: transform;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-6px);
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 ease-out;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
   }
   
   /* ===== Reduced Motion ===== */
