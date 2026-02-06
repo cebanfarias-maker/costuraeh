@@ -20,32 +20,32 @@
     --brand-warm: 30 30% 94%;
     
     /* ===== Semantic Colors ===== */
-    --background: 35 35% 97%;
+    --background: 174 35% 95%;
     --foreground: 220 20% 20%;
     
-    --card: 0 0% 100%;
+    --card: 350 40% 98%;
     --card-foreground: 220 20% 20%;
     
-    --popover: 0 0% 100%;
+    --popover: 350 40% 98%;
     --popover-foreground: 220 20% 20%;
     
     --primary: 174 50% 55%;
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 350 45% 95%;
-    --secondary-foreground: 350 40% 35%;
+    --secondary: 350 50% 94%;
+    --secondary-foreground: 350 40% 30%;
     
-    --muted: 35 25% 92%;
-    --muted-foreground: 220 15% 45%;
+    --muted: 174 25% 90%;
+    --muted-foreground: 220 15% 40%;
     
     --accent: 350 55% 75%;
-    --accent-foreground: 350 50% 25%;
+    --accent-foreground: 350 50% 20%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 35 20% 88%;
-    --input: 35 20% 88%;
+    --border: 174 25% 85%;
+    --input: 174 25% 85%;
     --ring: 174 50% 55%;
     
     --radius: 1rem;
@@ -55,24 +55,24 @@
     --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     
     /* ===== Shadows ===== */
-    --shadow-soft: 0 2px 15px -3px hsl(350 30% 50% / 0.1);
-    --shadow-medium: 0 8px 30px -8px hsl(350 30% 50% / 0.15);
-    --shadow-large: 0 20px 50px -15px hsl(350 30% 50% / 0.2);
+    --shadow-soft: 0 2px 15px -3px hsl(174 40% 50% / 0.12);
+    --shadow-medium: 0 8px 30px -8px hsl(174 40% 50% / 0.18);
+    --shadow-large: 0 20px 50px -15px hsl(174 40% 50% / 0.22);
     
     /* ===== Gradients ===== */
     --gradient-hero: linear-gradient(135deg, hsl(174 50% 55%) 0%, hsl(174 55% 45%) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(350 55% 80%) 0%, hsl(350 50% 70%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(35 35% 97%) 0%, hsl(35 30% 94%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(350 55% 85%) 0%, hsl(350 50% 75%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(174 35% 95%) 0%, hsl(350 45% 95%) 100%);
     
     /* Sidebar vars */
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 174 30% 96%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 350 45% 95%;
     --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-border: 174 20% 88%;
+    --sidebar-ring: 174 50% 55%;
   }
 
   .dark {

@@ -18,6 +18,18 @@ const depoimentos = [
     nome: "Amanda Piovezan",
     texto: "O curso inicial tem cinco aulas... todas as aulas saímos com uma peça feita, isso motiva bastante. O Local é lindo, organizado e inspirador. A professora é atenciosa, tem didática, paciente e um amor de pessoa... amei ter conhecido a Dani ❤️ Os projetos são lindos, úteis e diferentes dificuldades. Aprendi a colocar zíper, botão de pressão, utilizar manta, recortar no molde, montar a peça, entre outros aprendizados como treinar a costura na máquina. Utilizei diferentes máquinas, podendo ter a experiência para escolher qual comprar. Amei que o curso tem uma formatura para quem finaliza o módulo inicial, isso mostra a dedicação e carinho da professora pelo que faz. Este curso também foi muito afetivo pra mim... me ajudou a lidar com o luto da minha vó que era costureira ❤️",
   },
+  {
+    nome: "Ana Oliveira",
+    texto: "Esse ateliê é maravilhoso, e a professora Daniela a melhor que eu já tive em todos os sentidos! Aprendemos do básico mesmo, tudo de costura criativa! Eu sou apaixonada!!! Recomendo demais!",
+  },
+  {
+    nome: "Paula David",
+    texto: "Nesse espaço costurar e criar são atividades incríveis que podem trazer muitos benefícios para quem as pratica. Além de ser uma forma de expressão artística, a costura e a criação permitem desenvolver habilidades manuais, estimular a criatividade e promover a concentração. Um espaço aconchegante aonde podemos produzir peças únicas, feitas sob medida para atender nossas necessidades e gostos pessoais. Isso nos dá a oportunidade de explorar nossa individualidade e estilo próprio. Além disso, é uma maneira sustentável de consumir moda, pois podemos reutilizar materiais e reduzir o desperdício.",
+  },
+  {
+    nome: "Samantha Cunha",
+    texto: "Já vai fazer 7 meses que faço esse curso de costura, as aulas são muito boas, bem explicadinho (desde a anatomia da máquina até como vender as peças), o espaço também é bem aconchegante e tranquilo. Sem contar que a professora é maravilhosa e uma grande amiga. Recomendo super ☺️",
+  },
 ];
 
 const ProvaSocial = () => {
