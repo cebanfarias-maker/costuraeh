@@ -30,9 +30,12 @@ const horarios = [
 
 const ComoFunciona = () => {
   return (
-    <section id="como-funciona" className="py-20 md:py-28 bg-background relative overflow-hidden">
+    <section id="como-funciona" className="py-20 md:py-28 bg-gradient-to-b from-background to-muted/50 relative overflow-hidden">
       {/* Background pattern */}
-      <div className="absolute inset-0 sewing-pattern opacity-30" />
+      <div className="absolute inset-0 sewing-pattern opacity-40" />
+      
+      {/* Animated stitch line */}
+      <div className="absolute top-0 left-0 right-0 stitch-line animate-stitch" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">

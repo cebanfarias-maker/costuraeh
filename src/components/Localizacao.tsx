@@ -20,10 +20,10 @@ const Localizacao = () => {
   const googleMapsLink = "https://www.google.com/maps/search/?api=1&query=R.+Gen.+Nestor+Passos,+256+-+Jardim+Paraíso,+São+Paulo+-+SP,+02417-140";
 
   return (
-    <section id="localizacao" className="py-20 md:py-28 bg-secondary/30 relative overflow-hidden">
+    <section id="localizacao" className="py-20 md:py-28 bg-gradient-to-b from-secondary/40 to-secondary/20 relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 right-0 stitch-line" />
-      <div className="absolute -top-20 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 right-0 stitch-line animate-stitch" />
+      <div className="absolute -top-20 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">

@@ -9,7 +9,7 @@ const Hero = () => {
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 
   return (
-    <section className="relative min-h-screen flex items-center bg-background overflow-hidden">
+    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-background via-secondary/30 to-background overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 sewing-pattern opacity-40" />
       
@@ -112,7 +112,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom stitch decoration */}
-      <div className="absolute bottom-0 left-0 right-0 stitch-line" />
+      <div className="absolute bottom-0 left-0 right-0 stitch-line animate-stitch" />
     </section>
   );
 };

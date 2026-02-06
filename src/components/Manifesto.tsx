@@ -1,4 +1,4 @@
-import { Sparkles, Heart, Recycle } from "lucide-react";
+import { Heart } from "lucide-react";
 
 const Manifesto = () => {
   return (
@@ -33,18 +33,28 @@ const Manifesto = () => {
               </p>
               
               <p className="text-lg md:text-xl text-foreground leading-relaxed">
-                O prazer de passar momentos agradáveis com as amigas, a descoberta de talentos adormecidos, lembranças de infância, o manuseio de tecidos e aviamentos. <span className="italic text-accent">Enfim só coisas boas!</span>
+                O prazer de passar momentos agradáveis com as amigas, a descoberta de talentos adormecidos, lembranças de infância, o manuseio de tecidos e aviamentos. <span className="italic text-accent font-medium">Enfim só coisas boas!</span>
               </p>
               
-              <div className="py-6">
-                <p className="text-2xl md:text-3xl font-display text-primary">
-                  Desafie seu talento!<br />
-                  <span className="text-accent">Venha costurar com a gente!</span>
+              <div className="py-6 px-4 md:px-8 bg-primary/5 rounded-2xl">
+                <p className="text-2xl md:text-3xl font-display text-primary mb-3">
+                  Desafie seu talento!
+                </p>
+                <p className="text-xl md:text-2xl font-display text-accent">
+                  Venha costurar com a gente!
                 </p>
               </div>
               
               <p className="text-lg md:text-xl text-foreground leading-relaxed">
-                O curso que temos aqui é de <span className="font-semibold">Costura Criativa</span>!
+                O curso que temos aqui é de <span className="font-semibold text-primary">Costura Criativa</span>!
+              </p>
+
+              <p className="text-lg md:text-xl text-foreground leading-relaxed">
+                Ah, e aqui também oferecemos serviço de <span className="font-semibold">reparos e consertos de roupas</span>!
+              </p>
+
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                O espaço também tem uma preocupação com os resíduos resultantes dos processos de costura, procurando o descarte correto.
               </p>
             </div>
             
@@ -53,35 +63,10 @@ const Manifesto = () => {
               "
             </div>
             
-            {/* Additional Services */}
-            <div className="mt-10 pt-8 border-t border-border/50">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="flex items-center gap-3 p-4 rounded-xl bg-card/50">
-                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Sparkles className="w-5 h-5 text-accent" />
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    <span className="font-medium text-foreground">Reparos e Consertos</span><br />
-                    Também oferecemos serviço de reparos e consertos de roupas
-                  </p>
-                </div>
-                
-                <div className="flex items-center gap-3 p-4 rounded-xl bg-card/50">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Recycle className="w-5 h-5 text-primary" />
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    <span className="font-medium text-foreground">Sustentabilidade</span><br />
-                    Preocupação com o descarte correto de resíduos de costura
-                  </p>
-                </div>
-              </div>
-            </div>
-            
             {/* Founded badge */}
             <div className="mt-8 text-center">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm">
-                <span className="w-2 h-2 bg-primary rounded-full" />
+                <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                 Ateliê fundado em 2018
               </span>
             </div>
