@@ -134,12 +134,6 @@ const GaleriaAlunas = () => {
           ))}
         </div>
 
-        {/* Placeholder for more photos */}
-        <div className="mt-8 text-center">
-          <p className="text-muted-foreground text-sm">
-            📸 Mais fotos do curso serão adicionadas em breve
-          </p>
-        </div>
       </div>
 
       {/* Lightbox Modal */}

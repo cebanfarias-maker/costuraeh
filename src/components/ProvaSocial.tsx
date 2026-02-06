@@ -170,12 +170,6 @@ const ProvaSocial = () => {
           </div>
         </div>
 
-        {/* Nota sobre mais avaliações */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent">
-            <span className="text-sm">✨ Mais avaliações e fotos serão adicionadas em breve</span>
-          </div>
-        </div>
       </div>
     </section>
   );
