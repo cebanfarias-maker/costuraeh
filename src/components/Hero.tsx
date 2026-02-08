@@ -1,5 +1,5 @@
 import { MessageCircle, MapPin } from "lucide-react";
-import heroImage from "@/assets/alunas-3.webp";
+import heroImage from "@/assets/alunas-hero.png";
 import logo from "@/assets/logo-costuraeh.png";
 
 const WHATSAPP_NUMBER = "5511993223183";
