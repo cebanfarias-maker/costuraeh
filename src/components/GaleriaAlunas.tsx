@@ -89,7 +89,7 @@ const GaleriaAlunas = () => {
         {/* Desktop Grid */}
         <div className="hidden md:grid grid-cols-3 gap-4 max-w-5xl mx-auto">
           {fotos.map((foto, index) => <button key={index} onClick={() => setSelectedImage(index)} className={`relative overflow-hidden rounded-2xl aspect-square cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-large ${index === 0 ? "col-span-2 row-span-2" : ""}`} aria-label={`Ver foto: ${foto.alt}`}>
-              <img src={foto.src} alt={foto.alt} className="w-full h-full object-cover" loading="lazy" />
+              
               
             </button>)}
         </div>
