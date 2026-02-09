@@ -4,7 +4,7 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import alunas1 from "@/assets/alunas-1.jpg";
 import alunas2 from "@/assets/alunas-2.jpg";
 import alunas3 from "@/assets/alunas-7.png";
-import alunas4 from "@/assets/alunas-8.png";
+import alunas4 from "@/assets/alunas-4.webp";
 import alunas5 from "@/assets/alunas-5.jpg";
 import alunas6 from "@/assets/alunas-6.jpg";
 import fachada from "@/assets/fachada.png";
