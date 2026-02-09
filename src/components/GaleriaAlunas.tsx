@@ -6,6 +6,7 @@ import alunas3 from "@/assets/alunas-7.png";
 import alunas4 from "@/assets/alunas-4.webp";
 import alunas5 from "@/assets/alunas-5.jpg";
 import alunas6 from "@/assets/alunas-6.jpg";
+import alunas8 from "@/assets/alunas-8.png";
 import fachada from "@/assets/fachada.png";
 
 const fotos = [
@@ -15,6 +16,7 @@ const fotos = [
   { src: alunas4, alt: "Criações do ateliê" },
   { src: alunas5, alt: "Turma de costura" },
   { src: alunas6, alt: "Alunas trabalhando no ateliê" },
+  { src: alunas8, alt: "Professora e alunas durante aula de costura" },
 ];
 
 const GaleriaAlunas = () => {
