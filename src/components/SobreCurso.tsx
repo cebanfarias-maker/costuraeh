@@ -4,7 +4,7 @@ import { RevealOnScroll } from "./RevealOnScroll";
 const paraQuem = [
   {
     icon: User,
-    text: "Para quem nunca tocou em uma máquina",
+    text: "Para quem nunca usou uma máquina de costura",
     description: "Você vai aprender do absoluto zero, sem medo e no seu ritmo."
   },
   {
@@ -49,7 +49,7 @@ const SobreCurso = () => {
           <RevealOnScroll className="h-full">
             <div className="card-elevated h-full">
               <h3 className="text-2xl font-display text-foreground mb-8 text-center">
-                Para quem é este curso?
+                Para quem é esse curso?
               </h3>
               <div className="space-y-6">
                 {paraQuem.map((item, index) => (
