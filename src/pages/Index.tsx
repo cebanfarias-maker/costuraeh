@@ -12,7 +12,9 @@ import Localizacao from "@/components/Localizacao";
 import ChamadaFinal from "@/components/ChamadaFinal";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-import ThemeToggle from "@/components/ThemeToggle";
+
+import Navbar from "@/components/Navbar";
+import { RevealOnScroll } from "@/components/RevealOnScroll";
 
 const Index = () => {
   useEffect(() => {
@@ -46,18 +48,49 @@ const Index = () => {
 
   return (
     <main className="min-h-screen">
-      <ThemeToggle />
+
+      <Navbar />
+
       <Hero />
-      <Manifesto />
-      <SobreCurso />
-      <ComoFunciona />
-      <EstruturaCurso />
-      <Diferenciais />
-      <GaleriaAlunas />
-      <ProvaSocial />
-      <SobreProfessora />
-      <Localizacao />
-      <ChamadaFinal />
+
+      <RevealOnScroll>
+        <Manifesto />
+      </RevealOnScroll>
+
+      <SobreCurso /> {/* SobreCurso has its own internal animations now */}
+
+      <RevealOnScroll>
+        <ComoFunciona />
+      </RevealOnScroll>
+
+      <RevealOnScroll>
+        <EstruturaCurso />
+      </RevealOnScroll>
+
+      <RevealOnScroll>
+        <Diferenciais />
+      </RevealOnScroll>
+
+      <RevealOnScroll>
+        <GaleriaAlunas />
+      </RevealOnScroll>
+
+      <RevealOnScroll>
+        <ProvaSocial />
+      </RevealOnScroll>
+
+      <RevealOnScroll>
+        <SobreProfessora />
+      </RevealOnScroll>
+
+      <RevealOnScroll>
+        <Localizacao />
+      </RevealOnScroll>
+
+      <RevealOnScroll>
+        <ChamadaFinal />
+      </RevealOnScroll>
+
       <Footer />
       <WhatsAppFloat />
     </main>
