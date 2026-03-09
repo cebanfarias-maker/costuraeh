@@ -25,7 +25,7 @@ const Hero = () => {
             <img 
               src={logo} 
               alt="CosturaEh - Cursos Criativos para Adultos e Crianças" 
-              className="h-20 md:h-24 w-auto"
+              className="h-28 md:h-36 lg:h-40 w-auto"
             />
           </div>
         </div>
