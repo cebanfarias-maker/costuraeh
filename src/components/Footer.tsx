@@ -21,7 +21,7 @@ const Footer = () => {
               <img 
                 src={logo} 
                 alt="CosturaEh" 
-                className="h-16 w-auto brightness-0 invert opacity-90"
+                className="h-20 md:h-24 w-auto brightness-0 invert opacity-90"
               />
             </div>
             <p className="text-background/60 text-sm mb-4">
