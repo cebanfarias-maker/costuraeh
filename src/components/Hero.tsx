@@ -18,20 +18,9 @@ const Hero = () => {
       <div className="absolute bottom-20 left-10 w-56 h-56 bg-primary/15 rounded-full blur-3xl animate-float" />
       <div className="absolute top-1/2 left-1/3 w-40 h-40 bg-accent/10 rounded-full blur-2xl" />
 
-      {/* Logo Header */}
-      <div className="absolute top-0 left-0 right-0 py-4 z-10">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-center lg:justify-start">
-            <img 
-              src={logo} 
-              alt="CosturaEh - Cursos Criativos para Adultos e Crianças" 
-              className="h-28 md:h-36 lg:h-40 w-auto"
-            />
-          </div>
-        </div>
-      </div>
+      {/* Logo Header removed - logo now in content area */}
 
-      <div className="container mx-auto px-4 py-20 md:py-28 pt-32 md:pt-36 relative z-10">
+      <div className="container mx-auto px-4 py-20 md:py-28 pt-24 md:pt-28 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left">
@@ -40,7 +29,15 @@ const Hero = () => {
               <span>São Paulo • Jardim Paraíso</span>
             </div>
             
-            <h1 className="section-title text-foreground mb-6 animate-fade-in delay-100">
+            <div className="mb-4 animate-fade-in delay-100">
+              <img 
+                src={logo} 
+                alt="CosturaEh - Cursos Criativos para Adultos e Crianças" 
+                className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto mx-auto lg:mx-0"
+              />
+            </div>
+            
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-display font-medium text-foreground mb-6 animate-fade-in delay-150">
               Curso de{" "}
               <span className="text-gradient">Costura Criativa</span>{" "}
               para Iniciantes
