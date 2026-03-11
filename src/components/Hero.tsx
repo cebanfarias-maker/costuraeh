@@ -29,7 +29,15 @@ const Hero = () => {
               <span>São Paulo • Jardim Paraíso</span>
             </div>
             
-            <h1 className="section-title text-foreground mb-6 animate-fade-in delay-100">
+            <div className="mb-4 animate-fade-in delay-100">
+              <img 
+                src={logo} 
+                alt="CosturaEh - Cursos Criativos para Adultos e Crianças" 
+                className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto mx-auto lg:mx-0"
+              />
+            </div>
+            
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-display font-medium text-foreground mb-6 animate-fade-in delay-150">
               Curso de{" "}
               <span className="text-gradient">Costura Criativa</span>{" "}
               para Iniciantes
