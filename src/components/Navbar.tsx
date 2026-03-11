@@ -75,7 +75,7 @@ const Navbar = () => {
           onClick={(e) => scrollToSection(e, "#hero")}
           className="text-2xl font-display font-bold text-foreground"
         >
-          Costura<span className="text-primary">Eh</span>
+          <span className="font-serif italic">Costura</span><span className="font-serif italic text-primary">Eh</span>
         </a>
 
         {/* Desktop Menu */}

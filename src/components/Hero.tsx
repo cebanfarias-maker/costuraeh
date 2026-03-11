@@ -20,7 +20,7 @@ const Hero = () => {
 
       {/* Logo Header removed - logo now in content area */}
 
-      <div className="container mx-auto px-4 py-20 md:py-28 pt-32 md:pt-36 relative z-10">
+      <div className="container mx-auto px-4 py-20 md:py-28 pt-24 md:pt-28 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left">
