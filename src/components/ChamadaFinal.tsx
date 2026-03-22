@@ -20,7 +20,7 @@ const ChamadaFinal = () => {
           </h2>
           
           <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Agende uma aula experimental e descubra como a costura pode transformar 
+            Agende sua primeira aula e descubra como a costura pode transformar 
             sua vida — seja por hobby ou para gerar renda extra.
           </p>
           
@@ -29,7 +29,7 @@ const ChamadaFinal = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-white text-primary rounded-full font-medium text-lg shadow-medium hover:shadow-large transition-all hover:-translate-y-1"
-            aria-label="Agendar aula experimental no WhatsApp"
+            aria-label="Agendar primeira aula no WhatsApp"
           >
             <MessageCircle className="w-6 h-6" />
             Quero saber mais no WhatsApp
