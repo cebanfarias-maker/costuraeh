@@ -20,7 +20,7 @@ const ChamadaFinal = () => {
           </h2>
           
           <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Agende uma aula experimental e descubra como a costura pode transformar 
+            Agende sua primeira aula e descubra como a costura pode transformar 
             sua vida — seja por hobby ou para gerar renda extra.
           </p>
           
