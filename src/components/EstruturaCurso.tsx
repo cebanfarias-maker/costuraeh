@@ -53,7 +53,7 @@ const EstruturaCurso = () => {
         {/* Info adicional */}
         <div className="mt-12 text-center">
           <p className="text-muted-foreground text-sm max-w-md mx-auto">
-            O conteúdo detalhado de cada módulo será apresentado durante a aula experimental
+            O conteúdo detalhado de cada módulo será apresentado durante a primeira aula
           </p>
         </div>
       </div>

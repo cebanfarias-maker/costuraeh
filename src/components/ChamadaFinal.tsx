@@ -29,7 +29,7 @@ const ChamadaFinal = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-white text-primary rounded-full font-medium text-lg shadow-medium hover:shadow-large transition-all hover:-translate-y-1"
-            aria-label="Agendar aula experimental no WhatsApp"
+            aria-label="Agendar primeira aula no WhatsApp"
           >
             <MessageCircle className="w-6 h-6" />
             Quero saber mais no WhatsApp

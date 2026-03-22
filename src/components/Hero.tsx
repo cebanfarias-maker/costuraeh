@@ -54,10 +54,10 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp"
-                aria-label="Agendar aula experimental no WhatsApp"
+                aria-label="Agendar primeira aula no WhatsApp"
               >
                 <MessageCircle className="w-5 h-5" />
-                Agendar aula experimental
+                Agendar primeira aula
               </a>
               
               <a href="#galeria" className="btn-outline">
